@@ -1,0 +1,275 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    background-color: white;
+    max-width: 1200px;
+    margin: auto;
+    gap: 1em;
+
+}
+
+.header {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 7em;
+    background-image: url(../images/header.jpg);
+    background-size: 140%;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+}
+
+.bloque-navegacion {
+    display: flex;
+
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo img {
+    width: 50%;
+}
+
+.navcentro {
+    flex: 4;
+    display: flex;
+}
+
+.navegadores {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style-type: none;
+    flex: 1 1 auto;
+    align-items: center
+}
+
+li {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: grey;
+}
+
+
+.navegador {
+    display: flex;
+    flex: 15%;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.8em;
+
+}
+
+.navegador i {
+    margin-right: 3px;
+}
+
+/* para separar el icono del contenido del navegador o pongo un margin en en icono
+o el contenido lo meto en otra caja diferente, un p o un span. Es decir el a tendria dos elemntos dentro*/
+
+
+a:link {
+
+    text-decoration: none;
+    color: grey;
+}
+
+a:hover {
+    color: black;
+}
+
+.icono {
+    flex: 1;
+    background-image: url(images/favicon.jpg) no-repeat;
+    border: solid black;
+}
+
+.rrss {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    color: grey;
+}
+
+.rrss i {
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    height: 6em;
+}
+
+.unico {
+
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+.titulo p {
+    color: lightsalmon;
+    opacity: 0.8;
+    padding: 0.4em 5.5em;
+    font-family: serif;
+    text-align: center;
+    font-size: 2em;
+}
+
+.main {
+    display: flex;
+    background-color: white;
+    flex-flow: row nowrap;
+    gap: 1em;
+
+}
+
+.principal {
+    display: flex;
+    flex: 72%;
+    flex-flow: row wrap;
+    background-color: rgb(220, 222, 223);
+    padding: 1em;
+    gap: 2em;
+}
+
+.articulo {
+    background-color: whitesmoke;
+    flex: 1 1 40%;
+    padding: 0.8em;
+
+}
+
+.articulo img {
+    object-fit: cover;
+    width: 100%;
+    height: 50%;
+
+}
+
+.fecha {
+    color: lightyellow;
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin-top: -1.5em;
+}
+
+
+.encabezado {
+    background-color: rgb(241, 123, 123);
+    color: white;
+    font-family: sans-serif;
+    margin-top: 0.8em;
+    padding-top: 0.2em;
+    padding-left: 0.2em;
+}
+
+
+.parraf {
+    column-count: 2;
+    color: grey;
+    margin: 1em 0 1em;
+}
+
+.leer {
+    font-weight: lighter;
+    font-size: 0.9em;
+}
+
+.contenidofooter {
+    text-align: center;
+    flex: 1 1 100%;
+}
+
+
+.aside {
+    flex-flow: column nowrap;
+    flex: 24%;
+    padding: 1em;
+    background-color: rgb(220, 222, 223);
+}
+
+.parrafo {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
+.footer {
+    height: 4rem;
+    background-color: rgb(220, 222, 223);
+    justify-content: center;
+}
+
+.pfooter {
+    height: 100%;
+    background-color: rgb(250, 247, 247);
+    color: gray;
+    text-align: center;
+    padding: 1.4em;
+    margin: 0 1em;
+
+
+}
+
+/*Tablets */
+
+@media only screen and (max-width: 768px) {
+    .main {
+        
+        flex-flow: column nowrap;
+    }
+}
+
+/*moviles*/
+@media only screen and (max-width: 600px) {
+    .header {
+        flex-flow: column nowrap;
+    }
+
+    .navegador,
+    .navegador {
+        width: 100%;
+    }
+
+    .navcentro {
+        width: 100%;
+    }
+
+    .main {
+       
+        flex-flow: column wrap;
+    }
+
+    .articulo {
+        flex: 1 1 100%;
+
+    }
+
+    .aside {
+        flex-flow: column nowrap;
+    }
+
+    .parrafo {
+        flex: 1 1 100%;
+    }
+
+}
